@@ -1,0 +1,8 @@
+# Dependencias (no se suben porque se instalan con npm)
+node_modules/
+
+# Variables privadas (si usas un archivo .env con claves)
+.env
+
+# Archivos del sistema (si usas macOS)
+.DS_Store

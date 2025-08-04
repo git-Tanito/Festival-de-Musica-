@@ -1,0 +1,46 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+@use "sass:color";
+.video {
+  position: relative;
+  min-height: 50rem;
+  max-height: 70rem;
+  overflow: hidden;
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      270deg,
+      rgba(v.$morado, 60%),
+      rgba(color.adjust(v.$morado, $lightness: -15%), 80%)
+    );
+
+    display: flex;
+    align-items: center;
+  }
+  video {
+    display: block;
+    width: auto;
+    @include m.desktop {
+      width: 100%;
+    }
+  }
+}
+
+.contenido-video {
+  z-index: 1;
+  h2 {
+    color: v.$blanco;
+    font-size: 7rem;
+    margin: 0;
+  }
+  p {
+    color: v.$blanco;
+    background-color: v.$rosa;
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    margin: 0;
+  }
+}
